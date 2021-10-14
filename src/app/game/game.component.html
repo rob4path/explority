@@ -1,3 +1,43 @@
 <div id="main">
-    <img src="../../../images/Act-front.png" alt="Actionează">
+    <div id="cards">
+        <section class="card">
+            <img class="imgFront" src="../../images/Act-front.png" alt="Act" [hidden]="showAct"
+                (click)="toggleAct(true)">
+            <img class="imgFront" src="../../images/Act-back.png" alt="Act" [hidden]="!showAct"
+                (click)="toggleAct(false)">
+            <span [hidden]="!showAct" class="text">{{actText}}</span>
+        </section>
+
+        <section class="card">
+            <img class="imgFront" src="../../images/Drawing-front.png" alt="Draw" [hidden]="showDraw"
+                (click)="toggleDraw(true)">
+            <img class="imgFront" src="../../images/Drawing-back.png" alt="Draw" [hidden]="!showDraw"
+                (click)="toggleDraw(false)">
+                <span [hidden]="!showDraw" class="text">{{drawText}}</span>
+        </section>
+
+        <section class="card">
+            <img class="imgFront" src="../../images/Miming-front.png" alt="Miming" [hidden]="showMiming"
+                (click)="toggleMiming(true)">
+            <img class="imgFront" src="../../images/Miming-back.png" alt="Miming" [hidden]="!showMiming"
+                (click)="toggleMiming(false)">
+                <span [hidden]="!showMiming" class="text">{{mimingText}}</span>
+        </section>
+
+        <section class="card">
+            <img class="imgFront" src="../../images/Speaking-front.png" alt="Speaking" [hidden]="showSpeaking"
+                (click)="toggleSpeaking(true)">
+            <img class="imgFront" src="../../images/Speaking-back.png" alt="Speaking" [hidden]="!showSpeaking"
+                (click)="toggleSpeaking(false)">
+                <span [hidden]="!showSpeaking" class="text">{{speakingText}}</span>
+        </section>
+
+        <section class="card">
+            <img class="imgFront" src="../../images/Surprize-front.png" alt="Surprize" [hidden]="showSurprize"
+                (click)="toggleSurprize(true)">
+            <img class="imgFront" src="../../images/Surprize-back.png" alt="Surprize" [hidden]="!showSurprize"
+                (click)="toggleSurprize(false)">
+                <span [hidden]="!showSurprize" class="text">{{surprizeText}}</span>
+        </section>
+    </div>
 </div>

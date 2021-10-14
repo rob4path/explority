@@ -1,0 +1,28 @@
+/* .txtover { position:relative } .txtover figcaption { position:absolute; bottom:0; left:0 } */
+
+#cards {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:auto
+}
+
+
+.card {
+    display: inline;
+    width: 15%;
+    margin: 0.1%; 
+}
+
+.imgFront {
+   width: 100%;
+   text-align: center;
+}
+
+.text {
+    z-index: 99;
+    bottom: 50%;
+    position: relative;
+    color: white;
+}
