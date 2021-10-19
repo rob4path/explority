@@ -42,7 +42,7 @@ export class GameComponent implements OnInit {
         this.actText = this.actCards.shift()
       }
       else {
-        this.actText = "There are no cards anymore for this set!"
+        this.actText = "There are no cards anymore for this set! Click again to restart!"
         this.actCards = this.cardsService.getAllAct();
       }
     }

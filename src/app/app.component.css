@@ -1,3 +1,9 @@
 .title {
-    color: red;
+    width: 60%;
+}
+.titleDiv {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+
 }
