@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CardsService } from '../shared/services/cards.service';
 
 @Component({
   selector: 'app-add-card',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCardComponent implements OnInit {
 
-  constructor() { }
+  actCards: string[] = [];
+
+  constructor(public cardsService: CardsService) { }
 
   ngOnInit(): void {
+    this.actCards = this.cardsService.getAllAct();
   }
 
 }

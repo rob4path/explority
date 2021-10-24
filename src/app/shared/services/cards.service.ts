@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class CardsService {
 
   constructor() { }
+  
   getAllAct() { 
     const cards = [
       '111', '222', '333', '444', '555'
