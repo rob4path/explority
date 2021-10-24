@@ -1,0 +1,12 @@
+<input type="button" value="Play" [routerLink]="['/']">
+
+
+<div>
+    <h2>Acting</h2>
+    <div *ngFor="let card of actCards; let i = index">
+        <input type="text" [(ngModel)]="actCards[i].text">
+    </div>
+<button type="button" value="Add card" (click)="addCard()">Add card</button>
+<button type="button" value="Save">Save</button>
+
+</div>

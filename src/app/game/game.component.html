@@ -1,5 +1,7 @@
 <div id="main">
+    <input type="button" value="Add cards" [routerLink]="['/add-cards']">
     <div id="cards">
+       
         <section class="card">
             <img class="imgFront" src="../../images/Act-front.png" alt="Act" [hidden]="showAct"
                 (click)="toggleAct(true)">
