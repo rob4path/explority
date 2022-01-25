@@ -1,0 +1,227 @@
+.component {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category {
+  margin: 10px;
+  -webkit-box-shadow: 4px 6px 21px 11px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 6px 21px 11px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  border-radius: 10px;
+  background: #000000;
+  background: -moz-linear-gradient(-45deg, #000000 0%, #095003c5 100%);
+  background: -webkit-linear-gradient(-45deg, #000000 0%, #095003c5 100%);
+  background: linear-gradient(135deg, #000000f1 0%, #148f09c5 100%);
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.textHolder {
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  padding: 5px;
+  font-size: 15px;
+  border-width: 4px;
+  border-color: #ffffff;
+  background-color: #e2ffe0;
+  color: #000000;
+  border-style: double;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px rgba(66, 66, 66, 0.81);
+  text-shadow: 1px 0px 10px rgba(66, 66, 66, 0.57);
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: right;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  box-shadow: 0px 10px 19px -1px #276873;
+  background: linear-gradient(to bottom, #59a1b3 5%, #40994e 100%);
+  background-color: #59a1b3;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 5px 17px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+}
+.btn:hover {
+  background: linear-gradient(to bottom, #40994e 5%, #59a1b3 100%);
+  background-color: #40994e;
+}
+.btn:active {
+  position: relative;
+  top: 1px;
+}
+p {
+  color: rgb(255, 255, 255);
+}
+.btnPageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.btnPage {
+  margin: 20px;
+  font-size: 25px;
+}
+.icon-add {
+  background-color: green;
+}
+[hidden] {
+  display: none !important;
+}
+
+.saved {
+  background-color: rgba(212, 56, 28, 0.616);
+}
+
+.mat-mini {
+  margin: 2px 4px;
+  width: 40px;
+  height: 40px;
+}
+
+.delete {
+}
+.slideIn {
+  animation: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 slideInFromLeft;
+}
+
+.slideOut {
+  animation: fadeOut 3s;
+}
+.update-btn {
+  background-color: rgba(94, 230, 31, 0.616);
+}
+.ping-icon {
+  position: absolute;
+  background-color: rgba(94, 230, 31, 0.616);
+  border-radius: 50%;
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  /* border: 3px solid green; */
+  left: 8px;
+}
+
+@keyframes ping {
+  100%,
+  to {
+    transform: scale(2.5);
+    opacity: 0%;
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideOutFromLeft {
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes goAway {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotateX(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+}
+
+.go-away {
+  animation-name: goAway;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+}
+
+.add {
+  background-color: rgb(107, 206, 41);
+}
+.plus-one {
+  background-color: rgb(107, 206, 41);
+}
+
+/*This is a fade in example.*/
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+/*This is a fade out example. */
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  1% {
+    display: none;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+.animate {
+  /*put animation attributes here. Here's a list.
+    (https://www.w3schools.com/css/css3_animations.asp)*/
+  animation: fadeOut;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  /*put the default display and opacity here, the same as "0%"*/
+  display: none;
+  opacity: 0;
+}
+
+/* @media only screen and (max-width: 600px) {
+    .category {
+      width: 50%;
+    }
+    .textHolder {
+      width: 50%;
+    }
+    .btnContainer {
+      width: 50%;
+    }
+  } */

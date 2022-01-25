@@ -1,0 +1,11 @@
+<button
+  (cdkDragStarted)="handleDragStart($event)"
+  (click)="handleClick($event)"
+  cdkDrag
+  [cdkDragDisabled]="!isDraggable"
+  mat-raised-button
+  class="mat-btn"
+  color="primary"
+>
+  {{ title }}
+</button>

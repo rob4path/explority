@@ -1,12 +1,30 @@
-<input type="button" value="Play" [routerLink]="['/']">
+<div class="btnPageContainer">
+  <app-button [title]="['Play']" [routerLink]="['/']"></app-button>
+</div>
 
+<div class="component">
+  <app-add-cards-form
+    [type]="CardType.Act"
+    category="Acting"
+  ></app-add-cards-form>
 
-<div>
-    <h2>Acting</h2>
-    <div *ngFor="let card of actCards; let i = index">
-        <input type="text" [(ngModel)]="actCards[i].text">
-    </div>
-<button type="button" value="Add card" (click)="addCard()">Add card</button>
-<button type="button" value="Save">Save</button>
+  <app-add-cards-form
+    [type]="CardType.Draw"
+    category="Drawing"
+  ></app-add-cards-form>
 
+  <app-add-cards-form
+    [type]="CardType.Speak"
+    category="Speaking"
+  ></app-add-cards-form>
+
+  <app-add-cards-form
+    [type]="CardType.Miming"
+    category="Miming"
+  ></app-add-cards-form>
+
+  <app-add-cards-form
+    [type]="CardType.Surprize"
+    category="Surprize"
+  ></app-add-cards-form>
 </div>

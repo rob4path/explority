@@ -1,0 +1,43 @@
+<!-- <input type="text" [(ngModel)]="email" />
+<input type="password" [(ngModel)]="password" />
+<button (click)="register()">Register</button> -->
+
+<mat-card class="auth-field-bk auth-field-margin">
+  <mat-card-title class="auth-title">Register</mat-card-title>
+  <mat-card-content>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label class="input">Nickname</mat-label>
+        <input matInput type="text" [(ngModel)]="nickName" autocomplete="off" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label class="input">Email</mat-label>
+        <input matInput type="email" [(ngModel)]="email" autocomplete="off" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label class="input">Password</mat-label>
+        <input
+          matInput
+          [type]="hide ? 'password' : 'text'"
+          [(ngModel)]="password"
+          autocomplete="off"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <!-- <p [hidden]="!error" class="error">{{ error }}</p> -->
+
+      <app-button title="Register" (click)="register()"></app-button>
+    </div>
+  </mat-card-content>
+</mat-card>

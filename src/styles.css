@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+/* html {
+  color: #fff;
+  background-image: url(./images/background2.jpg);
+  background-color: rgb(0 0 0 / 72%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color-burn;
+  height: 100%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+html {
+  background: url(./images/background2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgb(0 0 0 / 72%);
+  background-blend-mode: color-burn;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.myBtn {
+  font-size: 90px !important;
+}
+.auth-field-bk {
+  -webkit-box-shadow: 4px 6px 21px 11px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 6px 21px 11px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  border-radius: 10px;
+  background: #000000;
+  background: -moz-linear-gradient(-45deg, #000000 0%, #095003c5 100%);
+  background: -webkit-linear-gradient(-45deg, #000000 0%, #095003c5 100%);
+  background: linear-gradient(135deg, #000000f1 0%, #148f09c5 100%);
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+.auth-field-margin {
+  margin: 20px 80px;
+  margin-top: -50px;
+  width: 500px;
+}
+.auth-title {
+  padding-bottom: 20px;
+}
+.auth-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: rgba(0, 0, 0, 0.829);
+}
+.mat-form-field-label,
+.mat-form-field-label.mat-focused,
+.mat-form-field.mat-focused.matform-field-should-float {
+  color: #4ab91670;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  color: whitesmoke;
+}
+.mat-form-field-empty.mat-form-field-label {
+  color: green;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0) inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: whitesmoke;
+}
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0) inset;
+  -webkit-text-fill-color: whitesmoke;
+}
+@media only screen and (max-width: 600px) {
+  .section.container {
+    max-height: 154.4px !important;
+    width: 100px !important;
+    margin: 5px !important;
+    display: inline !important;
+
+    max-height: 154.4px !important;
+  }
+
+  div.card {
+    max-height: 154.4px !important;
+  }
+  div.back {
+    max-height: 154.4px !important;
+  }
+}

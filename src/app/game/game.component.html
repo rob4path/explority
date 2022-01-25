@@ -1,45 +1,41 @@
 <div id="main">
-    <input type="button" value="Add cards" [routerLink]="['/add-cards']">
-    <div id="cards">
-       
-        <section class="card">
-            <img class="imgFront" src="../../images/Act-front.png" alt="Act" [hidden]="showAct"
-                (click)="toggleAct(true)">
-            <img class="imgFront" src="../../images/Act-back.png" alt="Act" [hidden]="!showAct"
-                (click)="toggleAct(false)">
-            <span [hidden]="!showAct" class="text">{{actText}}</span>
-        </section>
+  <div class="btnPageContainer">
+    <app-button
+      [hidden]="!isLoggedIn"
+      url="/add-cards"
+      [isDraggable]="true"
+      [title]="['Add cards']"
+    ></app-button>
+    <!-- <app-button
+      url="/dashboard"
+      [isDraggable]="false"
+      [title]="['Tests']"
+    ></app-button> -->
 
-        <section class="card">
-            <img class="imgFront" src="../../images/Drawing-front.png" alt="Draw" [hidden]="showDraw"
-                (click)="toggleDraw(true)">
-            <img class="imgFront" src="../../images/Drawing-back.png" alt="Draw" [hidden]="!showDraw"
-                (click)="toggleDraw(false)">
-                <span [hidden]="!showDraw" class="text">{{drawText}}</span>
-        </section>
-
-        <section class="card">
-            <img class="imgFront" src="../../images/Miming-front.png" alt="Miming" [hidden]="showMiming"
-                (click)="toggleMiming(true)">
-            <img class="imgFront" src="../../images/Miming-back.png" alt="Miming" [hidden]="!showMiming"
-                (click)="toggleMiming(false)">
-                <span [hidden]="!showMiming" class="text">{{mimingText}}</span>
-        </section>
-
-        <section class="card">
-            <img class="imgFront" src="../../images/Speaking-front.png" alt="Speaking" [hidden]="showSpeaking"
-                (click)="toggleSpeaking(true)">
-            <img class="imgFront" src="../../images/Speaking-back.png" alt="Speaking" [hidden]="!showSpeaking"
-                (click)="toggleSpeaking(false)">
-                <span [hidden]="!showSpeaking" class="text">{{speakingText}}</span>
-        </section>
-
-        <section class="card">
-            <img class="imgFront" src="../../images/Surprize-front.png" alt="Surprize" [hidden]="showSurprize"
-                (click)="toggleSurprize(true)">
-            <img class="imgFront" src="../../images/Surprize-back.png" alt="Surprize" [hidden]="!showSurprize"
-                (click)="toggleSurprize(false)">
-                <span [hidden]="!showSurprize" class="text">{{surprizeText}}</span>
-        </section>
-    </div>
+    <app-button
+      [hidden]="isLoggedIn"
+      url="auth/register"
+      [isDraggable]="false"
+      [title]="['Register']"
+    ></app-button>
+    <app-button
+      [hidden]="isLoggedIn"
+      url="auth/login"
+      [isDraggable]="false"
+      [title]="['Login']"
+    ></app-button>
+    <app-button
+      [hidden]="!isLoggedIn"
+      (click)="logout()"
+      [isDraggable]="false"
+      [title]="['Logout']"
+    ></app-button>
+  </div>
+  <div id="cards">
+    <app-card-stack [type]="CardType.Act" img="Act"> </app-card-stack>
+    <app-card-stack [type]="CardType.Draw" img="Drawing"></app-card-stack>
+    <app-card-stack [type]="CardType.Miming" img="Miming"></app-card-stack>
+    <app-card-stack [type]="CardType.Speak" img="Speaking"></app-card-stack>
+    <app-card-stack [type]="CardType.Surprize" img="Surprize"></app-card-stack>
+  </div>
 </div>

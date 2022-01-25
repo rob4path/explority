@@ -1,0 +1,5 @@
+<div class="main" *ngFor="let card of cards">
+  <p>{{ card.text }} - {{ card.type }}</p>
+  <button (click)="deleteById(card._id)">Delete this</button>
+</div>
+`

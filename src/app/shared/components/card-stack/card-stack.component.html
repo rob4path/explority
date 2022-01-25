@@ -1,0 +1,31 @@
+<!-- <section id="player" class="card player" [class.voted]="showCard">
+  <div class="front" (click)="toggle(true)">
+    <img class="imgFront" [src]="'/images/' + img + '-front.png'" alt="alt" />
+  </div>
+  <div class="back" (click)="toggle(false)">
+    <img class="imgFront" [src]="'/images/' + img + '-back.png'" alt="alt" />
+    <span class="text">{{ text }}</span>
+
+
+    [ngClass]="showCard ? 'flipped' : ''"
+
+
+  </div>
+</section> -->
+
+<section
+  class="container"
+  (cdkDragStarted)="handleDragStart($event)"
+  (click)="handleClick($event)"
+  cdkDrag
+>
+  <div [class.flipped]="showCard" class="card">
+    <div class="front">
+      <img class="img" [src]="'images/' + img + '-front.png'" [alt]="img" />
+    </div>
+    <div class="back">
+      <img class="img" [src]="'images/' + img + '-back.png'" [alt]="img" />
+      <span class="text">{{ text }}</span>
+    </div>
+  </div>
+</section>

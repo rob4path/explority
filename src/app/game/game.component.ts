@@ -1,92 +1,50 @@
+import { Card, CardType } from '../shared/models/card-model';
 import { Component, OnInit } from '@angular/core';
-import { CardsService } from '../shared/services/cards.service'
+
+import { AuthService } from '../shared/services/auth.service';
+import { CardsService } from '../shared/services/cards.service';
+import { CdkDragStart } from '@angular/cdk/drag-drop';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
-  styleUrls: ['./game.component.css']
+  styleUrls: ['./game.component.css'],
 })
 export class GameComponent implements OnInit {
+  CardType = CardType;
+  isLoggedIn: boolean;
+  public dragging: boolean;
 
-  showAct = false;
-  showSpeaking = false;
-  showDraw = false;
-  showSurprize = false;
-  showMiming = false;
-
-  actText: string;
-  actCards: string[]
-  speakingText: string;
-  speakingCards: string[]
-  drawText: string;
-  drawCards: string[]
-  mimingText: string;
-  mimingCards: string[]
-  surprizeText: string;
-  surprizeCards: string[]
-
-  constructor(private cardsService: CardsService) { }
+  constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.actCards = this.cardsService.getAllAct();
-    this.speakingCards = this.cardsService.getAllSpeaking();
-    this.drawCards = this.cardsService.getAllDraw();
-    this.mimingCards = this.cardsService.getAllMiming();
-    this.surprizeCards = this.cardsService.getAllSurprize();
+    this.init();
+    this.isLoggedIn = this.authService.isLoggedIn();
   }
 
-  toggleAct(show: boolean) {
-    if (show) {
-      this.showAct = true;
-      if (this.actCards.length > 0) {
-        this.actText = this.actCards.shift()
-      }
-      else {
-        this.actText = "There are no cards anymore for this set! Click again to restart!"
-        this.actCards = this.cardsService.getAllAct();
-      }
-    }
-    else {
-      this.showAct = false;
-    }
+  async init() {}
+
+  async logout() {
+    await this.authService.logout();
+    location.reload();
   }
 
-
-  toggleSpeaking(show: boolean) {
-    if (show) {
-      this.showSpeaking = true;
-
-    }
-    else {
-      this.showSpeaking = false;
-    }
+  handleDragStart(event: CdkDragStart): void {
+    this.dragging = true;
+    console.log('handleDragStart', this.dragging);
   }
 
-  toggleDraw(show: boolean) {
-    if (show) {
-      this.showDraw = true;
+  handleClick(event: MouseEvent, url?: string): void {
+    if (this.dragging) {
+      this.dragging = false;
+      console.log('handleClick', this.dragging);
 
+      return;
     }
-    else
-      this.showDraw = false;
-  }
-
-  toggleSurprize(show: boolean) {
-    if (show) {
-      this.showSurprize = true;
-
+    if (url) {
+      this.router.navigateByUrl(url);
+      console.log('btn clicked!');
     }
-    else
-      this.showSurprize = false;
   }
-
-  toggleMiming(show: boolean) {
-    if (show) {
-      this.showMiming = true;
-
-    }
-    else
-      this.showMiming = false;
-  }
-
 }

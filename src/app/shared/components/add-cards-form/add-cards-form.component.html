@@ -1,0 +1,81 @@
+<div class="category">
+  <h2>{{ category }}</h2>
+  <div *ngFor="let card of cards; let i = index">
+    <!-- <mat-form-field appearance="outline">
+      <mat-label class="input">Your card</mat-label>
+
+      <input
+        matInput
+        (ngModelChange)="changedI(i)"
+        type="text"
+        [(ngModel)]="cards[i].text"
+      />
+    </mat-form-field> -->
+    <input
+      (ngModelChange)="changedI(i)"
+      (ngModelChange)="saveNewCard(i)"
+      class="textHolder"
+      type="text"
+      [(ngModel)]="cards[i].text"
+    />
+    <button [hidden]="editing" (click)="editOne(card._id)">Edit</button>
+    <p [hidden]="editing">
+      {{ cards[i].text }}
+    </p>
+    <!-- TODO button lightening 
+apear and dissapear with efect
+
+-->
+    <button
+      class="mat-mini delete"
+      mat-mini-fab
+      color="warn"
+      title="Delete this card."
+      [hidden]="!card._id"
+      (click)="deleteById(card._id)"
+    >
+      <mat-icon class="mat-icon" [hidden]="!card._id">delete_forever</mat-icon>
+    </button>
+
+    <button
+      class="mat-mini update-btn slideIn"
+      mat-mini-fab
+      title="Update this card."
+      [hidden]="!card._id || !changed[i]"
+      (click)="updatedById(card._id, card, i)"
+    >
+      <mat-icon class="mat-icon">check</mat-icon>
+      <mat-icon class="ping-icon"></mat-icon>
+    </button>
+
+    <button
+      class="mat-mini add slideIn"
+      mat-mini-fab
+      aria-label="Add this card to DB"
+      title="Add this card to your set."
+      [hidden]="card._id"
+      (click)="addCardToDb(card, i)"
+    >
+      <mat-icon class="mat-icon">assignment_turned_in</mat-icon>
+      <mat-icon [hidden]="!toSave[i]" [class.ping-icon]="toSave[i]"></mat-icon>
+    </button>
+  </div>
+
+  <div class="btnContainer">
+    <!-- <app-button [title]="['Add card']" (click)="addCard()"></app-button> -->
+    <button
+      class="mat-mini plus-one"
+      mat-mini-fab
+      title="Add a new card."
+      (click)="addCard()"
+    >
+      <mat-icon class="mat-icon">exposure_plus_1</mat-icon>
+      <!-- <mat-icon class=""></mat-icon> -->
+    </button>
+    <!-- <app-button
+      [hidden]="saved"
+      [title]="['Save']"
+      (click)="save()"
+    ></app-button> -->
+  </div>
+</div>

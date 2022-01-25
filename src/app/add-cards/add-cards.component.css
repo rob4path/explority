@@ -1,0 +1,102 @@
+.component {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category {
+  margin: 10px;
+  -webkit-box-shadow: 4px 6px 21px 11px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 6px 21px 11px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  border-radius: 10px;
+  background: #000000;
+  background: -moz-linear-gradient(-45deg, #000000 0%, #095003c5 100%);
+  background: -webkit-linear-gradient(-45deg, #000000 0%, #095003c5 100%);
+  background: linear-gradient(135deg, #000000f1 0%, #148f09c5 100%);
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.textHolder {
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  padding: 5px;
+  font-size: 15px;
+  border-width: 4px;
+  border-color: #ffffff;
+  background-color: #e2ffe0;
+  color: #000000;
+  border-style: double;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px rgba(66, 66, 66, 0.81);
+  text-shadow: 1px 0px 10px rgba(66, 66, 66, 0.57);
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  box-shadow: 0px 10px 19px -1px #276873;
+  background: linear-gradient(to bottom, #59a1b3 5%, #40994e 100%);
+  background-color: #59a1b3;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 5px 17px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+}
+.btn:hover {
+  background: linear-gradient(to bottom, #40994e 5%, #59a1b3 100%);
+  background-color: #40994e;
+}
+.btn:active {
+  position: relative;
+  top: 1px;
+}
+p {
+  color: rgb(255, 255, 255);
+}
+.btnPageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.btnPage {
+  margin: 20px;
+  font-size: 25px;
+}
+.icon-add {
+  background-color: green;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* @media only screen and (max-width: 600px) {
+  .category {
+    width: 50%;
+  }
+  .textHolder {
+    width: 50%;
+  }
+  .btnContainer {
+    width: 50%;
+  }
+} */
