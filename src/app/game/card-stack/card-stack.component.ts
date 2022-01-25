@@ -1,7 +1,7 @@
-import { Card, CardType } from '../../models/card-model';
+import { Card, CardType } from '../../shared/models/card-model';
 import { Component, Input, OnInit } from '@angular/core';
 
-import { CardsService } from '../../services/cards.service';
+import { CardsService } from '../../shared/services/cards.service';
 import { CdkDragStart } from '@angular/cdk/drag-drop';
 
 @Component({

@@ -1,11 +1,11 @@
 import { AddCardsComponent } from './add-cards/add-cards.component';
-import { AddCardsFormComponent } from './shared/components/add-cards-form/add-cards-form.component';
+import { AddCardsFormComponent } from './add-cards/add-cards-form/add-cards-form.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthComponent } from './auth/auth.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { CardStackComponent } from './shared/components/card-stack/card-stack.component';
+import { CardStackComponent } from './game/card-stack/card-stack.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GameComponent } from './game/game.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
