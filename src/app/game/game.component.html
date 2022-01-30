@@ -16,19 +16,19 @@
       [hidden]="isLoggedIn"
       url="auth/register"
       [isDraggable]="false"
-      [title]="['Register']"
+      title="Register"
     ></app-button>
     <app-button
       [hidden]="isLoggedIn"
       url="auth/login"
       [isDraggable]="false"
-      [title]="['Login']"
+      title="Login"
     ></app-button>
     <app-button
       [hidden]="!isLoggedIn"
       (click)="logout()"
       [isDraggable]="false"
-      [title]="['Logout']"
+      title="Logout"
     ></app-button>
   </div>
   <div id="cards">

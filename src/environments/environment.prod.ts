@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://explority4path.herokuapp.com',
+  apiUrl: 'https://explority4path.herokuapp.com/api',
 };
