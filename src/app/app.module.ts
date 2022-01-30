@@ -13,6 +13,7 @@ import { JwtInterceptor } from './shared/services/jwt.interceptor';
 import { NgModule } from '@angular/core';
 import { SharedModule } from './shared/shared.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { SharedModule } from './shared/shared.module';
     DashboardComponent,
     CardStackComponent,
     AddCardsFormComponent,
+    
   ],
   imports: [
     BrowserModule,

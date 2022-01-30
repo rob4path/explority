@@ -6,7 +6,7 @@ import { CardsService } from '../../shared/services/cards.service';
 @Component({
   selector: 'app-add-cards-form',
   templateUrl: './add-cards-form.component.html',
-  styleUrls: ['./add-cards-form.component.css'],
+  styleUrls: ['./add-cards-form.component.scss'],
 })
 export class AddCardsFormComponent implements OnInit {
   cards: Card[] = [];

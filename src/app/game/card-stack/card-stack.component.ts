@@ -7,7 +7,7 @@ import { CdkDragStart } from '@angular/cdk/drag-drop';
 @Component({
   selector: 'app-card-stack',
   templateUrl: './card-stack.component.html',
-  styleUrls: ['./card-stack.component.css'],
+  styleUrls: ['./card-stack.component.scss'],
 })
 export class CardStackComponent implements OnInit {
   showCard: boolean = false;
